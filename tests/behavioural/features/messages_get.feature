@@ -19,3 +19,9 @@ Feature: Message get by ID Endpoint
     Given a Internal user sends multiple messages
     When the Respondent gets their messages
     Then the retrieved messages should have the correct INBOX and UNREAD labels
+
+  Scenario: As an external user I would like to be able to view a list of messages
+    Given messages have been sent to an external user 
+    When the external user navigates to their messages
+    Then all messages sent to the user are displayed
+ 
